@@ -86,7 +86,7 @@ def healthz():
 def metadata():
     return {
         "team_name": os.getenv("TEAM_NAME", "Team Vera"),
-        "team_members": [m.strip() for m in os.getenv("TEAM_MEMBERS", "Jhugan").split(",") if m.strip()],
+        "team_members": [m.strip() for m in os.getenv("TEAM_MEMBERS", "Vikash").split(",") if m.strip()],
         "model": llm.model_label(),
         "approach": ("Deterministic composer dispatched by trigger.kind over the 4 contexts (category/merchant/trigger/customer); "
                      "every fact is pulled from pushed context, never invented; category voice + Hindi-English code-mix; "
